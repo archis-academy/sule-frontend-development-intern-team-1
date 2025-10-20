@@ -11,7 +11,8 @@ const cardProperties = [
     bedCount: 4,
     bathCount: 3,
     tag: "Popular",
-    icon: "/icons/popular-icon.svg"
+    icon: "/icons/popular-icon.svg",
+    colorIndex: 1,
   },
   {
     image: "/images/card-image-2.jpg",
@@ -21,7 +22,8 @@ const cardProperties = [
     bedCount: 3,
     bathCount: 2,
     tag: "New Listing",
-    icon: "/icons/new-listing-icon.svg"
+    icon: "/icons/new-listing-icon.svg",
+    colorIndex: 2,
   },
   {
     image: "/images/card-image-3.jpg",
@@ -31,7 +33,8 @@ const cardProperties = [
     bedCount: 4,
     bathCount: 4,
     tag: "Discounted Price",
-    icon: "/icons/discounted-price-icon.svg"
+    icon: "/icons/discounted-price-icon.svg",
+    colorIndex: 3,
   },
   {
     image: "/images/card-image-4.jpg",
@@ -41,7 +44,8 @@ const cardProperties = [
     bedCount: 4,
     bathCount: 3,
     tag: "Popular",
-    icon: "/icons/popular-icon.svg"
+    icon: "/icons/popular-icon.svg",
+    colorIndex: 4,
   },
 ];
 
