@@ -1,7 +1,7 @@
-import Welcome from "@components/welcome/welcome";
+import CheckOutOurNew from "@/components/checkoutOurNew/checkoutOurNew";
 
 function Home() {
-  return <Welcome />;
+  return <CheckOutOurNew />;
 }
 
 export default Home;

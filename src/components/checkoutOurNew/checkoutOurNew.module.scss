@@ -1,0 +1,14 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+
+
+#checkoutOurNew {
+  max-width: 1440px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.cardWrapper {
+  display: flex;
+  gap: pxToRem(50);
+}

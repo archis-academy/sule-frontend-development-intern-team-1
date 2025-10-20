@@ -1,0 +1,88 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+
+.card {
+    gap: pxToRem(30);
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.cardImageWrapper {
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cardImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+
+.tag {
+    content: "";
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 10px 24px 10px 24px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 3;
+    left: 30px;
+    bottom: 29px;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardBody .price {
+    font-weight: 600;
+    font-size: pxToRem(27.6);
+    line-height: 100%;
+    letter-spacing: 0;
+    color: $text-color;
+}
+
+.cardBody .title {
+    font-weight: 500;
+    font-style: normal;
+    font-size: pxToRem(19.4);
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.cardBody .adress {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: $adress-text-color;
+}
+
+.cardBody .detailWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.cardBody .detailWrapper .detail {
+    display: flex;
+    gap: 10px;
+}
+
+.cardBody .detailWrapper .detailText {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: $text-color;
+}
