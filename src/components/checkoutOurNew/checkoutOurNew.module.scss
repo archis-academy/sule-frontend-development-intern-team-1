@@ -5,13 +5,86 @@
 #checkoutOurNew {
   max-width: 1440px;
   margin-inline: auto;
+  margin-block: 100px;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+
+  .checkoutHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .leftContent {
+      display: flex;
+      flex-direction: column;
+      gap: pxToRem(20);
+      width: 500px;
+
+      .sectionName {
+        font-weight: 500;
+        font-style: normal;
+        font-size: clamp(16px, calc((19.4/1440)* 100vw), 19.4px);
+        line-height: 100%;
+        letter-spacing: 0.15rem;
+        color: $checkout-color;
+      }
+
+      .sectionTitle {
+        font-weight: 600;
+        font-style: normal;
+        font-size: clamp(27.6px, calc((39.8 / 1440) * 100vw), 39.8px);
+        line-height: 47px;
+        letter-spacing: 0;
+        color: $text-color;
+      }
+
+      .sectionDescription {
+        font-weight: 400;
+        font-style: normal;
+        font-size: clamp(13.3px, calc((16 / 1440) * 100vw), 16px);
+        line-height: 26px;
+        letter-spacing: 0;
+        color: $adress-text-color;
+        padding-inline-end: 50px;
+      }
+    }
+
+    .rightContent {
+      display: flex;
+      gap: 10px;
+
+      .filterButton {
+        width: fit-content;
+        padding: 19px 30px 19px 30px;
+        border: 1px solid $button-color;
+        border-radius: 30px;
+        cursor: pointer;
+        background: #fff;
+        color: $button-color;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          background: $button-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.activeButton {
+  background: $button-color !important;
+  color: #fff !important;
 }
 
 .cardWrapper {
   display: flex;
   gap: pxToRem(50);
 }
+
 
 @media screen and (max-width: 1024px) {
 
@@ -23,6 +96,25 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: pxToRem(40);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  #checkoutOurNew {
+    gap: pxToRem(40);
+    margin-block: 60px;
+  }
+
+  .checkoutHeader {
+    flex-direction: column;
+    gap: 40px;
+
+    .leftContent {
+      width: 333px !important;
+    }
+
   }
 
 }

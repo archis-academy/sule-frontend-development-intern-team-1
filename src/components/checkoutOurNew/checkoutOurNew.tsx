@@ -55,6 +55,20 @@ function CheckOutOurNew() {
   return (
 
     <section id={styles.checkoutOurNew}>
+
+      <div className={styles.checkoutHeader}>
+        <div className={styles.leftContent}>
+          <p className={styles.sectionName}>CHECKOUT OUR NEW</p>
+          <h2 className={styles.sectionTitle}>Latest Listed Properties</h2>
+          <p className={styles.sectionDescription}>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+        </div>
+        <div className={styles.rightContent}>
+          <button className={styles.filterButton}>All</button>
+          <button className={`${styles.filterButton} ${styles.activeButton}`}>Sell</button>
+          <button className={styles.filterButton}>Rent</button>
+        </div>
+      </div>
+
       <div className={styles.cardWrapper}>
         {cardProperties.map((prop, index) => <CheckoutCard key={index} {...prop} />)}
       </div>
