@@ -2,8 +2,8 @@
 @use "@styles/_functions.scss" as *;
 
 
-#checkoutOurNew {
-  max-width: 1440px;
+.checkoutOurNew {
+  max-width: $desktop-l;
   margin-inline: auto;
   overflow: hidden;
 }
@@ -13,9 +13,9 @@
   gap: pxToRem(50);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $desktop-s) {
 
-  #checkoutOurNew {
+  .checkoutOurNew {
     margin-inline: 20px;
   }
 

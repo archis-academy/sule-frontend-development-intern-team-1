@@ -54,7 +54,7 @@ function CheckOutOurNew() {
 
   return (
 
-    <section id={styles.checkoutOurNew}>
+    <section className={styles.checkoutOurNew}>
       <div className={styles.cardWrapper}>
         {cardProperties.map((prop, index) => <CheckoutCard key={index} {...prop} />)}
       </div>
