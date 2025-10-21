@@ -1,8 +1,7 @@
 import React from "react";
 import "./secondaryHeader.scss";
-import { MapPin } from "lucide-react";
-import phone from "../../../public/icon _phone_.png"
-import mail from "../../../public/icon _mail_.png"
+import { MapPin,Phone,Mail } from "lucide-react";
+
 
 const SecondaryHeader: React.FC = () => {
   return (
@@ -18,19 +17,19 @@ const SecondaryHeader: React.FC = () => {
       <div className="secondary-header__contact">
         <div className="secondary-header__phone">
             <div className="secondary-header__phoneIcon">
-                <img src={phone} alt="phone icon"/>
+                <Phone color="#FFFFFF"/>
             </div>
-            <span className="secondary-header__number">
-            +1 206-214-2298
-            </span>
+            <a href="tel:+12062142298" className="secondary-header__number">
+  +1 206-214-2298
+</a>
         </div>
         <div className="secondary-header__email">
             <div className="secondary-header__emailIcon">
-                <img src={mail} alt="phone icon"/>
+                <Mail color="#FFFFFF"/>
             </div>
-            <span className="secondary-header__emailText">
-            support@rezilla.com
-            </span>
+            <a href="mailto:support@rezilla.com" className="secondary-header__emailText">
+  support@rezilla.com
+</a>
         </div>
       </div>
     </div>
