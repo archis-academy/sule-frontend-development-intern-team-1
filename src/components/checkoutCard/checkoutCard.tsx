@@ -1,6 +1,6 @@
 import styles from "@components/checkoutCard/checkoutCard.module.scss"
 
-type Props = {
+type CheckoutCardProps = {
     image: string;
     price: string;
     title: string;
@@ -12,15 +12,15 @@ type Props = {
     colorIndex: number;
 };
 
-function CheckoutCard({ image, price, title, adress, bedCount, bathCount, tag, icon, colorIndex }: Props) {
+function CheckoutCard({ image, price, title, adress, bedCount, bathCount, tag, icon, colorIndex }: CheckoutCardProps) {
 
-    const colorClasses = [styles.tagColor1, styles.tagColor2, styles.tagColor3, styles.tagColor4];
+    const colorClasses = [styles.popularTag, styles.newListingTag, styles.discountedTag, styles.popularTag];
 
     return (
         <div className={styles.card}>
             <div className={styles.cardImageWrapper}>
                 <img className={styles.cardImage} src={image} alt="card-image" />
-                <p className={`${styles.tag} ${colorIndex && colorClasses[colorIndex - 1]}`}>
+                <p className={colorClasses[colorIndex - 1]}>
                     <img src={icon} alt={tag} />
                     <span className={styles.tagText}>{tag}</span>
                 </p>
