@@ -71,14 +71,15 @@
           background: $button-color;
           color: $white;
         }
+
+        &.activeButton {
+          background: $button-color;
+          color: $white;
+        }
+
       }
     }
   }
-}
-
-.activeButton {
-  background: $button-color !important;
-  color: $white !important;
 }
 
 .cardWrapper {

@@ -1,7 +1,6 @@
 import styles from "@components/ourServicesCard/ourServicesCard.module.scss";
 
 type OurServicesCardProps = {
-    id: number;
     icon: string;
     title: string;
     text: string;
