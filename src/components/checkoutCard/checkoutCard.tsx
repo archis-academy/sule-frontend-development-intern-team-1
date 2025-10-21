@@ -18,7 +18,7 @@ function CheckoutCard({ image, price, title, address, bedCount, bathCount, tag, 
     return (
         <div className={styles.card}>
             <div className={styles.cardImageWrapper}>
-                <img className={styles.cardImage} src={image} alt="card-image" />
+                <img className={styles.cardImage} src={image} alt={title} />
                 <p className={classNames(styles.tag, {
                     [styles.popularTag]: tag === "Popular",
                     [styles.newListingTag]: tag === "New Listing",

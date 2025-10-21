@@ -1,5 +1,7 @@
 import styles from "@components/checkoutOurNew/checkoutOurNew.module.scss"
 import CheckoutCard from "../checkoutCard/checkoutCard";
+import { useState } from "react";
+import classNames from "classnames";
 
 const cardProperties = [
   {
@@ -51,6 +53,12 @@ const cardProperties = [
 
 function CheckOutOurNew() {
 
+  const [isActive, setIsActive] = useState<'all' | 'sell' | 'rent'>('sell');
+
+  const handleClickEvent = (button: 'all' | 'sell' | 'rent') => {
+    setIsActive(button);
+  }
+
   return (
 
     <section className={styles.checkoutOurNew}>
@@ -62,9 +70,10 @@ function CheckOutOurNew() {
           <p className={styles.sectionDescription}>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
         </div>
         <div className={styles.rightContent}>
-          <button className={styles.filterButton}>All</button>
-          <button className={`${styles.filterButton} ${styles.activeButton}`}>Sell</button>
-          <button className={styles.filterButton}>Rent</button>
+          <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'all' })} onClick={() => handleClickEvent('all')}>All</button>
+          <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'sell' })} onClick={() => handleClickEvent('sell')}>Sell</button>
+          <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'rent' })} onClick={() => handleClickEvent('rent')}>Rent</button>
+
         </div>
       </div>
 

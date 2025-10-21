@@ -123,14 +123,17 @@
             border-radius: 20px;
         }
 
-        .cardBody .title {
-            margin-bottom: 15px;
+        .cardBody {
+            .title {
+                margin-bottom: 15px;
+            }
 
             .detailIcon {
                 width: 22px;
                 height: 15.77px;
             }
         }
+
 
     }
 }

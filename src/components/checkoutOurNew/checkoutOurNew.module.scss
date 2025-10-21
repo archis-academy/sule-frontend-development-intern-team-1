@@ -102,19 +102,19 @@
 
 @media screen and (max-width: $tablet-m) {
 
-  #checkoutOurNew {
+  .checkoutOurNew {
     gap: pxToRem(40);
     margin-block: 60px;
-  }
 
-  .checkoutHeader {
-    flex-direction: column;
-    gap: pxToRem(40);
+    .checkoutHeader {
+      flex-direction: column;
+      gap: pxToRem(40);
 
-    .leftContent {
-      width: 333px !important;
+      .leftContent {
+        width: 333px;
+      }
+
     }
-
   }
 
 }
