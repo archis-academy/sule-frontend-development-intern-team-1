@@ -1,34 +1,36 @@
 import React from "react";
-import "./secondaryHeader.scss";
+import styles from "./secondaryHeader.module.scss";
 import { MapPin,Phone,Mail } from "lucide-react";
+import { CONTACT_INFO } from "@/constants/contact";
+
 
 
 const SecondaryHeader: React.FC = () => {
   return (
-    <div className="secondary-header">
-      <div className="secondary-header__location">
-        <div className="secondary-header__icon">
+    <div className={styles["secondary-header"]}>
+      <div className={styles["secondary-header__location"]}>
+        <div className={styles["secondary-header__icon"]}>
           <MapPin color="#FFFFFF" />
         </div>
-        <span className="secondary-header__text">
-          Rezilla, 18 Grattan St, Brooklyn
+        <span className={styles["secondary-header__text"]}>
+          {CONTACT_INFO.location}
         </span>
       </div>
-      <div className="secondary-header__contact">
-        <div className="secondary-header__phone">
-            <div className="secondary-header__phoneIcon">
+      <div className={styles["secondary-header__contact"]}>
+        <div className={styles["secondary-header__phone"]}>
+            <div className={styles["secondary-header__phoneIcon"]}>
                 <Phone color="#FFFFFF"/>
             </div>
-            <a href="tel:+12062142298" className="secondary-header__number">
-  +1 206-214-2298
-</a>
+            <a href={`tel:${CONTACT_INFO.phone}`} className={styles["secondary-header__number"]}>
+            {CONTACT_INFO.phone}
+          </a>
         </div>
-        <div className="secondary-header__email">
-            <div className="secondary-header__emailIcon">
+        <div className={styles["secondary-header__email"]}>
+            <div className={styles["secondary-header__emailIcon"]}>
                 <Mail color="#FFFFFF"/>
             </div>
-            <a href="mailto:support@rezilla.com" className="secondary-header__emailText">
-  support@rezilla.com
+            <a href={`mailto:${CONTACT_INFO.email}`} className={styles["secondary-header__emailText"]}>
+  {CONTACT_INFO.email}
 </a>
         </div>
       </div>
