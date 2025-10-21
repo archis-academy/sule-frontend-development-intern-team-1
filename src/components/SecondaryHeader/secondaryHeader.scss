@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+.secondary-header {
+  width: 100%;
+  height: 40px;
+  background: #3a0ca3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 240px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 13.3px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__phone,
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__phoneIcon,
+  &__emailIcon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__number,
+  &__emailText {
+    font-weight: 400;
+    font-size: 13.3px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 10px 80px;
+    height: auto;
+
+    &__text,
+    &__number,
+    &__emailText {
+      font-size: 12px;
+    }
+
+    &__icon,
+    &__phoneIcon,
+    &__emailIcon {
+      width: 14px;
+      height: 14px;
+    }
+
+    &__contact {
+      gap: 20px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 20px;
+    height: auto;
+
+    &__location {
+      justify-content: center;
+    }
+
+    &__contact {
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+    }
+
+    &__text,
+    &__number,
+    &__emailText {
+      font-size: 11.5px;
+      text-align: center;
+    }
+
+    &__icon,
+    &__phoneIcon,
+    &__emailIcon {
+      width: 12px;
+      height: 12px;
+
+      img {
+        width: 12px;
+      }
+    }
+  }
+
+ 
+  @media (max-width: 480px) {
+    padding: 8px 12px;
+
+    &__text,
+    &__number,
+    &__emailText {
+      font-size: 10.5px;
+    }
+
+    &__contact {
+      gap: 4px;
+    }
+  }
+}
