@@ -2,7 +2,6 @@ import styles from "@components/checkoutCard/checkoutCard.module.scss";
 import classNames from "classnames";
 
 type CheckoutCardProps = {
-    id: number;
     image: string;
     price: string;
     title: string;

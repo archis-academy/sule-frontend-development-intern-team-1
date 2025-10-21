@@ -15,7 +15,7 @@ const ourServicesCards = [
         text: "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.",
     },
     {
-        id: 2,
+        id: 3,
         icon: "/icons/our-services-icon-3.svg",
         title: "Rent a House",
         text: "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.",
