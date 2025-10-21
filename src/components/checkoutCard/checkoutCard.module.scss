@@ -6,12 +6,12 @@
     gap: pxToRem(30);
     display: flex;
     flex-direction: column;
-    font-family: "Poppins", sans-serif;
+    font-family: $primary-font;
 
     .cardImageWrapper {
         width: 340px;
         height: 340px;
-        border-radius: 30px;
+        border-radius: pxToRem(30);
         overflow: hidden;
         position: relative;
 
@@ -24,7 +24,7 @@
 
         .tag {
             content: "";
-            gap: 10px;
+            gap: pxToRem(10);
             display: flex;
             align-items: center;
             position: absolute;
@@ -34,30 +34,26 @@
             z-index: 3;
             left: 30px;
             bottom: 29px;
-            border-radius: 20px;
+            border-radius: pxToRem(20);
         }
 
-        .tagColor1 {
-            background: #FFE1E1;
-            color: #FF1111;
+        .popularTag {
+            @extend .tag;
+            background: $popular-tag-bg-color;
+            color: $popular-tag-color;
         }
 
-        .tagColor2 {
-            background: #D7EEFF;
-            color: #119BFF;
+        .newListingTag {
+            @extend .tag;
+            background: $newListing-tag-bg-color;
+            color: $newListing-tag-color;
         }
 
-        .tagColor3 {
-            background: #F1FFF1;
-            color: #00CE3A;
+        .discountedTag {
+            @extend .tag;
+            background: $discounted-tag-bg-color;
+            color: $discounted-tag-color;
         }
-
-
-        .tagColor4 {
-            background: #FFE1E1;
-            color: #FF1111;
-        }
-
     }
 
     .cardBody {

@@ -12,6 +12,13 @@ $adress-text-color: #808080;
 $checkout-color: #4361EE;
 $button-color: #3A0CA3;
 
+$popular-tag-color: #FF1111;
+$popular-tag-bg-color: #FFE1E1;
+$newListing-tag-color: #119BFF;
+$newListing-tag-bg-color: #D7EEFF;
+$discounted-tag-color: #00CE3A;
+$discounted-tag-bg-color: #F1FFF1;
+
 /*
  * Typography and font sizes
  *
@@ -19,7 +26,7 @@ $button-color: #3A0CA3;
  * */
 
 // font familly
-$primary-font: "Inter", sans-serif;
+$primary-font: "Poppins", sans-serif;
 
 //font-sizes
 $font-base: pxToRem(16);

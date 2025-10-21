@@ -1,5 +1,4 @@
 import styles from "@components/checkoutOurNew/checkoutOurNew.module.scss"
-
 import CheckoutCard from "../checkoutCard/checkoutCard";
 
 const cardProperties = [
@@ -54,7 +53,7 @@ function CheckOutOurNew() {
 
   return (
 
-    <section id={styles.checkoutOurNew}>
+    <section className={styles.checkoutOurNew}>
 
       <div className={styles.checkoutHeader}>
         <div className={styles.leftContent}>
