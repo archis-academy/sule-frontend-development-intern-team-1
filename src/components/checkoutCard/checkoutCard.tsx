@@ -1,26 +1,29 @@
-import styles from "@components/checkoutCard/checkoutCard.module.scss"
+import styles from "@components/checkoutCard/checkoutCard.module.scss";
+import classNames from "classnames";
 
 type CheckoutCardProps = {
+    id: number;
     image: string;
     price: string;
     title: string;
-    adress: string;
+    address: string;
     bedCount: number;
     bathCount: number;
     tag: string;
     icon: string;
-    colorIndex: number;
 };
 
-function CheckoutCard({ image, price, title, adress, bedCount, bathCount, tag, icon, colorIndex }: CheckoutCardProps) {
-
-    const colorClasses = [styles.popularTag, styles.newListingTag, styles.discountedTag, styles.popularTag];
+function CheckoutCard({ image, price, title, address, bedCount, bathCount, tag, icon }: CheckoutCardProps) {
 
     return (
         <div className={styles.card}>
             <div className={styles.cardImageWrapper}>
                 <img className={styles.cardImage} src={image} alt="card-image" />
-                <p className={colorClasses[colorIndex - 1]}>
+                <p className={classNames(styles.tag, {
+                    [styles.popularTag]: tag === "Popular",
+                    [styles.newListingTag]: tag === "New Listing",
+                    [styles.discountedTag]: tag === "Discounted Price"
+                })}>
                     <img src={icon} alt={tag} />
                     <span className={styles.tagText}>{tag}</span>
                 </p>
@@ -29,7 +32,7 @@ function CheckoutCard({ image, price, title, adress, bedCount, bathCount, tag, i
                 <span className={styles.price}>$ {price}</span>
                 <div>
                     <h4 className={styles.title}>{title}</h4>
-                    <span className={styles.adress}>{adress}</span>
+                    <span className={styles.adress}>{address}</span>
                 </div>
                 <div className={styles.detailWrapper}>
                     <p className={styles.detail}>

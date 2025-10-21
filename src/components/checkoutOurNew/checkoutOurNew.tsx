@@ -3,48 +3,48 @@ import CheckoutCard from "../checkoutCard/checkoutCard";
 
 const cardProperties = [
   {
+    id: 1,
     image: "/images/card-image-1.jpg",
     price: "5,970",
     title: "Tranquil Haven in the Woods",
-    adress: "103 Wright CourtBurien, WA 98168",
+    address: "103 Wright CourtBurien, WA 98168",
     bedCount: 4,
     bathCount: 3,
     tag: "Popular",
     icon: "/icons/popular-icon.svg",
-    colorIndex: 1,
   },
   {
+    id: 2,
     image: "/images/card-image-2.jpg",
     price: "1,970",
     title: "Serene Retreat by the Lake",
-    adress: "1964 Jehovah Drive, VA 22408",
+    address: "1964 Jehovah Drive, VA 22408",
     bedCount: 3,
     bathCount: 2,
     tag: "New Listing",
     icon: "/icons/new-listing-icon.svg",
-    colorIndex: 2,
   },
   {
+    id: 3,
     image: "/images/card-image-3.jpg",
     price: "3,450",
     title: "Charming Cottage in the Meadow",
-    adress: "1508 Centennial Farm RoadHarlan, 51537",
+    address: "1508 Centennial Farm RoadHarlan, 51537",
     bedCount: 4,
     bathCount: 4,
     tag: "Discounted Price",
     icon: "/icons/discounted-price-icon.svg",
-    colorIndex: 3,
   },
   {
+    id: 4,
     image: "/images/card-image-4.jpg",
     price: "2,389",
     title: "Grand Estate on the Hilltop",
-    adress: "103 Wright CourtBurien, WA 98168",
+    address: "103 Wright CourtBurien, WA 98168",
     bedCount: 4,
     bathCount: 3,
     tag: "Popular",
     icon: "/icons/popular-icon.svg",
-    colorIndex: 4,
   },
 ];
 
@@ -69,7 +69,7 @@ function CheckOutOurNew() {
       </div>
 
       <div className={styles.cardWrapper}>
-        {cardProperties.map((prop, index) => <CheckoutCard key={index} {...prop} />)}
+        {cardProperties.map((prop) => <CheckoutCard key={prop.id} {...prop} />)}
       </div>
     </section>
 

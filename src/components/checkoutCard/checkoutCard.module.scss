@@ -38,19 +38,16 @@
         }
 
         .popularTag {
-            @extend .tag;
             background: $popular-tag-bg-color;
             color: $popular-tag-color;
         }
 
         .newListingTag {
-            @extend .tag;
             background: $newListing-tag-bg-color;
             color: $newListing-tag-color;
         }
 
         .discountedTag {
-            @extend .tag;
             background: $discounted-tag-bg-color;
             color: $discounted-tag-color;
         }
@@ -126,14 +123,14 @@
             border-radius: 20px;
         }
 
-    }
+        .cardBody .title {
+            margin-bottom: 15px;
 
-    .cardBody .title {
-        margin-bottom: 15px !important;
-    }
+            .detailIcon {
+                width: 22px;
+                height: 15.77px;
+            }
+        }
 
-    .cardBody .detailIcon {
-        width: 22px;
-        height: 15.77px;
     }
 }
