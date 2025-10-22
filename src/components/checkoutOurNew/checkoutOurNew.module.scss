@@ -1,0 +1,28 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+
+
+.checkoutOurNew {
+  max-width: $desktop-l;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.cardWrapper {
+  display: flex;
+  gap: pxToRem(50);
+}
+
+@media screen and (max-width: $desktop-s) {
+
+  .checkoutOurNew {
+    margin-inline: 20px;
+  }
+
+  .cardWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: pxToRem(40);
+  }
+
+}
