@@ -1,4 +1,5 @@
 import CheckOutOurNew from "@/components/checkoutOurNew/checkoutOurNew";
+import CTABanner from "@/components/ctaBanner/ctaBanner";
 import OurServices from "@/components/ourServices/ourServices";
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <>
       <CheckOutOurNew />
       <OurServices />
+      <CTABanner />
     </>
   );
 }

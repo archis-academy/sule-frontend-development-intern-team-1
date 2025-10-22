@@ -91,6 +91,11 @@
                 display: flex;
                 align-items: center;
                 gap: pxToRem(10);
+
+                .detailIcon {
+                    width: 30px;
+                    height: 22px;
+                }
             }
 
             .detailText {
@@ -126,13 +131,7 @@
             .title {
                 margin-bottom: 15px;
             }
-
-            .detailIcon {
-                width: 22px;
-                height: 15.77px;
-            }
         }
-
 
         .cardBody .detailIcon {
             width: 22px;
