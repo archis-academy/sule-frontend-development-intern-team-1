@@ -7,7 +7,7 @@ import { CONTACT_INFO } from "@/constants/contact";
 
 const SecondaryHeader: React.FC = () => {
     return (
-        <div className={styles["secondary-header"]}>
+        <header className={styles["secondary-header"]}>
 
             <div className={styles["secondary-header__location"]}>
                 <div className={styles["secondary-header__icon"]}>
@@ -44,7 +44,7 @@ const SecondaryHeader: React.FC = () => {
                 </div>
             </div>
 
-        </div>
+        </header>
     );
 };
 
