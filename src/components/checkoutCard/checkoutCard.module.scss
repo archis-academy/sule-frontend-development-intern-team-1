@@ -23,7 +23,6 @@
         }
 
         .tag {
-            content: "";
             gap: pxToRem(10);
             display: flex;
             align-items: center;
@@ -38,23 +37,19 @@
         }
 
         .popularTag {
-            @extend .tag;
-            color: $popular-tag-color;
             background: $popular-tag-bg-color;
+            color: $popular-tag-color;
         }
 
         .newListingTag {
-            @extend .tag;
-            color: $newListing-tag-color;
             background: $newListing-tag-bg-color;
+            color: $newListing-tag-color;
         }
 
         .discountedTag {
-            @extend .tag;
-            color: $discounted-tag-color;
             background: $discounted-tag-bg-color;
+            color: $discounted-tag-color;
         }
-
     }
 
     .cardBody {
@@ -127,14 +122,21 @@
             border-radius: 20px;
         }
 
-    }
+        .cardBody {
+            .title {
+                margin-bottom: 15px;
+            }
 
-    .cardBody .title {
-        margin-bottom: 15px !important;
-    }
+            .detailIcon {
+                width: 22px;
+                height: 15.77px;
+            }
+        }
 
-    .cardBody .detailIcon {
-        width: 22px;
-        height: 16px;
+
+        .cardBody .detailIcon {
+            width: 22px;
+            height: 16px;
+        }
     }
 }
