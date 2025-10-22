@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .footer {
-  background: #f3f4ff;
+  background: $white;
   color: #1c1b29;
   border-radius: 10px 10px 0 0;
 
@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2.5rem;
-    padding: 3rem 1.5rem; // mobilde içerik nefes alsın
+    padding: 3rem 1.5rem; 
   }
 
   &__brand {
@@ -87,7 +87,7 @@
   &__form {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: $white;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -104,7 +104,7 @@
 
     button {
       background: #3a0ca3;
-      color: #fff;
+      color: $white;
       border: none;
       width: 55px;
       height: 55px;

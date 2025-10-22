@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="footer__col">
           <div className="footer__brand">
             <div className="footer__icon">
-            <img src="/public/Rezilla.svg" alt="" />
+            <img src="/Rezilla.svg" alt="" />
             </div>
             <h3>Rezilla</h3>
           </div>
