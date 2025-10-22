@@ -10,7 +10,7 @@ const SecondaryHeader: React.FC = () => {
         <div className={styles["secondary-header"]}>
             <div className={styles["secondary-header__location"]}>
                 <div className={styles["secondary-header__icon"]}>
-                    <MapPin color="#FFFFFF" />
+                    <MapPin  />
                 </div>
                 <span className={styles["secondary-header__text"]}>
                     {CONTACT_INFO.location}
@@ -19,7 +19,7 @@ const SecondaryHeader: React.FC = () => {
             <div className={styles["secondary-header__contact"]}>
                 <div className={styles["secondary-header__phone"]}>
                     <div className={styles["secondary-header__phoneIcon"]}>
-                        <Phone color="#FFFFFF" />
+                        <Phone />
                     </div>
                     <a href={`tel:${CONTACT_INFO.phone}`} className={styles["secondary-header__number"]}>
                         {CONTACT_INFO.phone}
@@ -27,7 +27,7 @@ const SecondaryHeader: React.FC = () => {
                 </div>
                 <div className={styles["secondary-header__email"]}>
                     <div className={styles["secondary-header__emailIcon"]}>
-                        <Mail color="#FFFFFF" />
+                        <Mail />
                     </div>
                     <a href={`mailto:${CONTACT_INFO.email}`} className={styles["secondary-header__emailText"]}>
                         {CONTACT_INFO.email}
