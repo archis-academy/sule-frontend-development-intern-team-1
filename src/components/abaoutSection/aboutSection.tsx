@@ -6,7 +6,7 @@ import styles from "./aboutSection.module.scss";
 
 const SecondaryHeader: React.FC = () => {
     return (
-        <section className="about">
+        <section className={styles["about"]}>
             
         </section>
     );
