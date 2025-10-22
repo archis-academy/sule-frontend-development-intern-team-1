@@ -62,7 +62,6 @@ function CheckOutOurNew() {
   return (
 
     <section className={styles.checkoutOurNew}>
-
       <div className={styles.checkoutHeader}>
         <div className={styles.leftContent}>
           <p className={styles.sectionName}>CHECKOUT OUR NEW</p>
@@ -73,10 +72,8 @@ function CheckOutOurNew() {
           <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'all' })} onClick={() => handleClickEvent('all')}>All</button>
           <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'sell' })} onClick={() => handleClickEvent('sell')}>Sell</button>
           <button className={classNames(styles.filterButton, { [styles.activeButton]: isActive === 'rent' })} onClick={() => handleClickEvent('rent')}>Rent</button>
-
         </div>
       </div>
-
       <div className={styles.cardWrapper}>
         {cardProperties.map((prop) => <CheckoutCard key={prop.id} {...prop} />)}
       </div>
