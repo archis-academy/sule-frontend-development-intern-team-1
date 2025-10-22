@@ -91,6 +91,11 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+
+                .detailIcon {
+                    width: 30px;
+                    height: 22px;
+                }
             }
 
             .detailText {

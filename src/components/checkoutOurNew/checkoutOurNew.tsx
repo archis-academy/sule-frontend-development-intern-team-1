@@ -1,5 +1,5 @@
 import styles from "@components/checkoutOurNew/checkoutOurNew.module.scss"
-import CheckoutCard from "../checkoutCard/checkoutCard";
+import CheckoutCard from "@components/checkoutCard/checkoutCard";
 import { useState } from "react";
 import classNames from "classnames";
 
