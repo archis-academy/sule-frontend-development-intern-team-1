@@ -1,0 +1,132 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+@use "@styles/_reset.scss" as *;
+
+
+.ctaBanner {
+    font-family: $primary-font;
+    position: relative;
+
+    .ctaBannerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: pxToRem(40);
+        padding-inline: 100px;
+        background: $cta-bg-color;
+        max-width: $max-width;
+        margin-block: 100px;
+        margin-inline: auto;
+        // position: relative;
+
+        .photoWrapper {
+            width: 358px;
+            height: 303px;
+            overflow: hidden;
+            z-index: 10;
+
+            .photo {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .rightContent {
+            width: 594px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            .textWrapper {
+
+                display: flex;
+                flex-direction: column;
+                gap: pxToRem(30);
+                color: $white;
+
+                .title {
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: clamp(32px, calc((40/1440)*100vw), 40px);
+                    line-height: 47px;
+                    letter-spacing: 0%;
+                }
+
+                .text {
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0%;
+                }
+            }
+
+            .registerButton {
+                background: $white;
+                border: 1px solid $cta-bg-color;
+                border-radius: pxToRem(30);
+                color: $cta-bg-color;
+                text-wrap: nowrap;
+                cursor: pointer;
+                width: 165px;
+                height: 49px;
+            }
+        }
+
+        .vector2 {
+            position: absolute;
+            top: 82px;
+            left: 330px;
+            transform: rotate(-30deg);
+        }
+
+        .vector3 {
+            position: absolute;
+            top: 240px;
+            left: 760px;
+            transform: rotate(60deg);
+        }
+
+    }
+
+    .vector1 {
+        position: absolute;
+        bottom: 4px;
+        left: 90px;
+    }
+}
+
+@media screen and (max-width: $tablet-s) {
+
+    .ctaBanner {
+        margin: 100px 20px 100px 20px;
+
+        .ctaBannerContent {
+            flex-direction: column;
+            padding: 20px;
+            gap: pxToRem(40);
+
+            .rightContent {
+                flex-direction: column;
+                width: 100%;
+                gap: pxToRem(40);
+                align-items: start;
+            }
+
+        }
+
+        .vector1 {
+            display: none;
+        }
+
+        .vector2 {
+            display: none;
+        }
+
+        .vector3 {
+            display: none;
+        }
+    }
+
+}
