@@ -5,133 +5,155 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 72px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
-  position: relative;
 
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-width: 500px;
-    gap: 32px;
-    text-align: left;
+    width: 500px;
+    gap: 48px;
   }
 
   &__title {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
   }
 
   &__subtext {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
+    font-size: 18px;
+    letter-spacing: 0.15em;
     color: $about-text-color;
+    margin: 0;
   }
 
   &__subtitle {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 1.3;
+    font-size: 38px;
+    line-height: 1.2;
     color: $text-color;
+    margin: 0;
   }
 
   &__description {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 26px;
     color: $text-color-3;
-    max-width: 480px;
+    margin: 0;
+    width: 100%;
   }
 
   &__cards {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 100%;
-    max-width: 500px;
   }
 
   &__card {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     background: $white;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 4px 10px 30px 0px $card-shadow;
-    padding: 20px;
-    flex: 1;
+    padding: 30px;
   }
 
   &__icon {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      color: $icon-color;
     }
   }
 
   &__cardtext {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
   }
 
   &__cardheader {
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 19px;
     color: $icon-color;
+    margin: 0;
   }
 
   &__carddescription {
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 16px;
     color: $text-color-3;
+    margin: 0;
   }
 
   &__images {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
     position: relative;
-    max-width: 700px;
+    gap: 30px;
   }
 
   &__large-images {
-    width: 330px;
-    border-radius: 20px;
+    width: 333px;
+    height: 547px;
+    border-radius: 30px;
     overflow: hidden;
+  }
 
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+  &__large-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 4px 10px 30px 0px $about-border-color;
   }
 
   &__group-images {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 547px;
     gap: 20px;
+  }
+
+  &__group1,
+  &__group2 {
+    width: 329px;
+    border-radius: 30px;
+    overflow: hidden;
 
     img {
-      width: 300px;
-      border-radius: 20px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      display: block;
+      box-shadow: 4px 10px 30px 0px $about-border-color;
     }
+  }
+
+  &__group1 {
+    height: 280px;
+  }
+
+  &__group2 {
+    height: 220px;
   }
 
   &__ellipse {
@@ -140,12 +162,20 @@
     height: 60px;
     bottom: 5px;
     right: 250px;
+    z-index: 2;
     opacity: 0.5;
+    transform: rotate(-30deg);
+    border-radius: 50%;
+    background: linear-gradient(180deg, $icon-color 0%, rgba(67, 97, 238, 0) 100%);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      display: block;
+      border-radius: 50%;
+      transform: rotate(-30deg);
+      opacity: 0.5;
     }
   }
 
@@ -162,101 +192,144 @@
       object-fit: contain;
     }
   }
-  @media (max-width: 1023px) {
+}
+
+
+@media (max-width: 768px) {
+  .about {
     flex-direction: column;
+    padding: 32px 20px;
+    gap: 24px;
     align-items: center;
-    gap: 48px;
-    padding: 0 20px;
-
-    &__text {
-      order: 1;
-      text-align: center;
-      align-items: center;
-      max-width: 90%;
-      gap: 24px;
-
-      h2 {
-        font-size: 1.8rem;
-        line-height: 1.4;
-      }
-
-      p {
-        font-size: 0.95rem;
-        max-width: 90%;
-      }
-    }
-
-    &__images {
-      order: 2;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: nowrap;
-      gap: 12px;
-      max-width: 100%;
-    }
-
-    &__large-images {
-      width: 60%;
-      max-width: 330px;
-
-      img {
-        max-height: 250px;
-      }
-    }
-
-    &__group-images {
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 12px;
-
-      img {
-        width: 150px;
-        max-height: 120px;
-      }
-    }
-
-   
-    &__cards {
-      order: 3;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    &__ellipse,
-    &__group {
-      display: none;
-    }
   }
 
-  @media (max-width: 600px) {
-    padding: 0 16px;
-    gap: 36px;
+  .about__text {
+    display: contents;
+  }
 
-    &__subtitle {
-      font-size: 1.5rem;
-    }
+  .about__title {
+    order: 1;
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 8px;
+  }
 
-    &__cards {
-      max-width: 100%;
-      gap: 16px;
-    }
+  .about__images {
+    order: 2;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    justify-content: center;
+  }
 
-    &__card {
-      padding: 16px;
-      border-radius: 16px;
-    }
+  .about__large-images {
+    flex: 1 1 60%;
+    min-width: 220px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
-    &__images {
-      gap: 16px;
-    }
+  .about__large-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 4px 10px 30px 0px $about-border-color;
+  }
 
-    &__group-images img {
-      width: 48%;
-      max-height: 100px;
-    }
+  .about__group-images {
+    flex: 0 0 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    min-width: 140px;
+    height: auto;
+  }
+
+  .about__group1,
+  .about__group2 {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .about__group1 img,
+  .about__group2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about__cards {
+    order: 3;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about__group,
+  .about__ellipse {
+    display: none;
+  }
+
+  .about__card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 16px;
+  }
+
+  .about__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about__cardheader {
+    font-size: 17px;
+  }
+
+  .about__carddescription {
+    font-size: 14px;
+  }
+
+  .about__subtitle {
+    font-size: 28px;
+  }
+
+  .about__description {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .about__subtitle {
+    font-size: 22px;
+  }
+
+  .about__subtext {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  .about__card {
+    padding: 16px;
+    gap: 12px;
   }
 }

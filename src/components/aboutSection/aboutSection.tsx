@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
-
 import smartHome from "../../../public/icons/icon _smart home_.svg";
 import userOrtagon from "../../../public/icons/icon _user octagon_.svg";
 import image1 from "../../../public/images/Rectangle-14.jpg";
@@ -8,8 +7,7 @@ import group1 from "../../../public/images/Rectangle-15.jpg";
 import group2 from "../../../public/images/Rectangle-16.jpg";
 import ellipse from "../../../public/images/Ellipse-18.jpg";
 import group from "../../../public/icons/Group.svg";
-
-const SecondaryHeader: React.FC = () => {
+const AboutSection: React.FC = () => {
   return (
     <section className={styles["about"]}>
       <div className={styles["about__text"]}>
@@ -19,7 +17,8 @@ const SecondaryHeader: React.FC = () => {
             Assisting individuals in locating the appropriate real estate.
           </h2>
           <p className={styles["about__description"]}>
-            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.
+            Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+            Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.
           </p>
         </div>
 
@@ -55,14 +54,17 @@ const SecondaryHeader: React.FC = () => {
           <img
             src={image1}
             alt="Modern Villa with Pool"
+            className={styles["about__large-image"]}
           />
         </div>
 
         <div className={styles["about__group-images"]}>
-          
+          <div className={styles["about__group1"]}>
             <img src={group1} alt="Bedroom Interior" />
+          </div>
+          <div className={styles["about__group2"]}>
             <img src={group2} alt="Living Room Interior" />
-          
+          </div>
         </div>
 
         <div className={styles["about__group"]}>
@@ -77,4 +79,4 @@ const SecondaryHeader: React.FC = () => {
   );
 };
 
-export default SecondaryHeader;
+export default AboutSection;
