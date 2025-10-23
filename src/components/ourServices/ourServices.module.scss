@@ -1,0 +1,77 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+@use "@styles/_reset.scss" as *;
+
+.ourServices {
+
+    font-family: $primary-font;
+
+    .ourServicesContent {
+        max-width: $max-width;
+        margin-inline: auto;
+        background: rgba($color: $our-services-bg-color, $alpha: .3);
+        padding: 50px 72px 50px 72px;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(70);
+
+        .ourServicesHeader {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: pxToRem(40);
+
+            .sectionTitle {
+                font-weight: 500;
+                font-style: normal;
+                line-height: 100%;
+                letter-spacing: 0.15rem;
+                text-align: center;
+                font-size: clamp(16px, calc((20/1440)*100vw), 20px);
+            }
+
+            .mainTitle {
+                font-weight: 600;
+                font-style: normal;
+                line-height: 47px;
+                letter-spacing: 0;
+                text-align: center;
+                font-size: clamp(28px, calc((40/1440)*100vw), 40px);
+
+            }
+
+        }
+
+        .ourServicesWrapper {
+            display: flex;
+            gap: pxToRem(50);
+        }
+    }
+}
+
+@media screen and (max-width: $desktop-s) {
+    .ourServices {
+        .ourServicesContent {
+            .ourServicesWrapper {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-m) {
+    .ourServices {
+        .ourServicesContent {
+            gap: pxToRem(40);
+            padding: 100px 60px 100px 60px;
+        }
+    }
+}
+@media screen and (max-width: $mobile-s) {
+    .ourServices {
+        .ourServicesContent {
+            gap: pxToRem(40);
+            padding: 100px 20px 100px 20px;
+        }
+    }
+}
