@@ -1,5 +1,5 @@
 import styles from "@components/locations/locations.module.scss";
-import LocationsCard from "../locationsCard/locationsCard";
+import LocationsCard from "@components/locationsCard/locationsCard";
 
 const locationsData = [
     { image: "/images/newyork.jpg", no: 216, city: "New York City, NY" },
