@@ -1,0 +1,99 @@
+@use "@styles/_variables.scss" as *;
+@use "@styles/_functions.scss" as *;
+@use "@styles/_reset.scss" as *;
+
+
+.locationsCard {
+    max-height: 320px;
+    min-height: 160px;
+    border-radius: pxToRem(30);
+    overflow: hidden;
+    position: relative;
+    font-family: $primary-font;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background: rgba($color: $black, $alpha: 0.1);
+    }
+
+    &:nth-child(1) {
+        grid-area: one;
+    }
+
+    &:nth-child(2) {
+        grid-area: two;
+    }
+
+    &:nth-child(3) {
+        grid-area: three;
+    }
+
+    &:nth-child(4) {
+        grid-area: four;
+    }
+
+    &:nth-child(5) {
+        grid-area: five;
+    }
+
+    .locationsImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 4px 10px 30px 0px rgba($color: $location-card-shadow-color, $alpha: 0.06);
+        border-radius: inherit;
+
+    }
+
+    .addressWrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(20);
+        left: 30px;
+        bottom: 40px;
+
+        .addressNo {
+            font-weight: 600;
+            font-style: normal;
+            line-height: 65px;
+            letter-spacing: 0;
+            font-size: clamp(32px, calc((57/1440) * 100vw), 57px);
+            color: $white;
+            opacity: 60%;
+            filter: blur(30);
+
+
+        }
+
+        .city {
+            font-weight: 500;
+            font-style: normal;
+            font-size: clamp(14px, calc((19/1440) * 100vw), 19px);
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: $white;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-m) {
+
+    .locationsCard {
+        border-radius: pxToRem(10);
+
+        .addressWrapper {
+            gap: pxToRem(10);
+            left: 10px;
+            bottom: 10px;
+
+            .addressNo {
+                line-height: 30px;
+            }
+        }
+    }
+
+}
