@@ -1,5 +1,5 @@
 import CheckOutOurNew from "@/components/checkoutOurNew/checkoutOurNew";
-import AboutSection from "../../components/abaoutSection/aboutSection"
+import AboutSection from "../../components/aboutSection/aboutSection"
 
 function Home() {
   return (<>
