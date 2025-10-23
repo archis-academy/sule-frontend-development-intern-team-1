@@ -133,8 +133,8 @@
     gap: 20px;
   }
 
-  &__group1,
-  &__group2 {
+  &__bedroom-image,
+  &__livingroom-image {
     width: 329px;
     border-radius: 30px;
     overflow: hidden;
@@ -148,11 +148,11 @@
     }
   }
 
-  &__group1 {
+  &__bedroom-image {
     height: 280px;
   }
 
-  &__group2 {
+  &__livingroom-image {
     height: 220px;
   }
 
@@ -174,8 +174,6 @@
       object-fit: contain;
       display: block;
       border-radius: 50%;
-      transform: rotate(-30deg);
-      opacity: 0.5;
     }
   }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
-import smartHome from "../../../public/icons/icon _smart home_.svg";
-import userOrtagon from "../../../public/icons/icon _user octagon_.svg";
-import image1 from "../../../public/images/Rectangle-14.jpg";
-import group1 from "../../../public/images/Rectangle-15.jpg";
-import group2 from "../../../public/images/Rectangle-16.jpg";
-import ellipse from "../../../public/images/Ellipse-18.jpg";
-import group from "../../../public/icons/Group.svg";
+import SmartHomeIcon from "../../../public/icons/icon _smart home_.svg?react";
+import UserOrtagon from "../../../public/icons/icon _user octagon_.svg?react";
+import Image1 from "../../../public/icons/Rectangle-4.svg?react";
+import Group1 from "../../../public/icons/Rectangle-15.svg?react";
+import Group2 from "../../../public/icons/Rectangle-16.svg?react";
+import Ellipse from "../../../public/icons/Ellipse-18.svg?react";
+import Group from "../../../public/icons/Group.svg?react";
 
 const AboutSection: React.FC = () => {
     return (
@@ -26,7 +26,7 @@ const AboutSection: React.FC = () => {
                 <div className={styles["about__cards"]}>
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <img src={smartHome} alt="Smart Home Icon" />
+                            <SmartHomeIcon />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
 
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <img src={userOrtagon} alt="User Icon" />
+                            <UserOrtagon />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
@@ -52,28 +52,26 @@ const AboutSection: React.FC = () => {
 
             <div className={styles["about__images"]}>
                 <div className={styles["about__large-images"]}>
-                    <img
-                        src={image1}
-                        alt="Modern Villa with Pool"
+                    <Image1
                         className={styles["about__large-image"]}
                     />
                 </div>
 
                 <div className={styles["about__group-images"]}>
-                    <div className={styles["about__group1"]}>
-                        <img src={group1} alt="Bedroom Interior" />
+                    <div className={styles["about__bedroom-image"]}>
+                        <Group1 />
                     </div>
-                    <div className={styles["about__group2"]}>
-                        <img src={group2} alt="Living Room Interior" />
+                    <div className={styles["about__livingroom-image"]}>
+                        <Group2 />
                     </div>
                 </div>
 
                 <div className={styles["about__group"]}>
-                    <img src={group} alt="Decorative Circular Text" />
+                    <Group/>
                 </div>
 
                 <div className={styles["about__ellipse"]}>
-                    <img src={ellipse} alt="Decorative Ellipse" />
+                    <Ellipse />
                 </div>
             </div>
         </section>
