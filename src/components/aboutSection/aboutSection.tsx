@@ -55,17 +55,14 @@ const SecondaryHeader: React.FC = () => {
           <img
             src={image1}
             alt="Modern Villa with Pool"
-            className={styles["about__large-image"]}
           />
         </div>
 
         <div className={styles["about__group-images"]}>
-          <div className={styles["about__group1"]}>
+          
             <img src={group1} alt="Bedroom Interior" />
-          </div>
-          <div className={styles["about__group2"]}>
             <img src={group2} alt="Living Room Interior" />
-          </div>
+          
         </div>
 
         <div className={styles["about__group"]}>

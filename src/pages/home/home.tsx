@@ -1,12 +1,12 @@
 import CheckOutOurNew from "@/components/checkoutOurNew/checkoutOurNew"
-import About from "../../components/aboutSection/aboutSection"
+import AboutSection from "../../components/aboutSection/aboutSection"
 import CTABanner from "@/components/ctaBanner/ctaBanner";
 import OurServices from "@/components/ourServices/ourServices";
 
 function Home() {
   return (
     <>
-      <About/>
+      <AboutSection/>
       <CheckOutOurNew />
       <OurServices />
       <CTABanner />
