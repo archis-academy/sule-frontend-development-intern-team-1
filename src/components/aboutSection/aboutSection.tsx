@@ -8,7 +8,7 @@ import group2 from "../../../public/images/Rectangle-16.jpg";
 import ellipse from "../../../public/images/Ellipse-18.jpg";
 import group from "../../../public/icons/Group.svg";
 
-const SecondaryHeader: React.FC = () => {
+const AboutSection: React.FC = () => {
     return (
         <section className={styles["about"]}>
             <div className={styles["about__text"]}>
@@ -80,4 +80,4 @@ const SecondaryHeader: React.FC = () => {
     );
 };
 
-export default SecondaryHeader;
+export default AboutSection;
