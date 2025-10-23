@@ -26,6 +26,7 @@ const SecondaryHeader: React.FC = () => {
                     <a
                         href={`tel:${CONTACT_INFO.phone}`}
                         className={styles["secondary-header__number"]}
+                        rel="noopener noreferrer"
                     >
                         {CONTACT_INFO.phone}
                     </a>
@@ -38,6 +39,7 @@ const SecondaryHeader: React.FC = () => {
                     <a
                         href={`mailto:${CONTACT_INFO.email}`}
                         className={styles["secondary-header__emailText"]}
+                         rel="noopener noreferrer"
                     >
                         {CONTACT_INFO.email}
                     </a>
