@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
 import SmartHomeIcon from "../../../public/icons/icon _smart home_.svg?react";
-import UserOrtagon from "../../../public/icons/icon _user octagon_.svg?react";
+import UserOctagon from "../../../public/icons/icon _user octagon_.svg?react";
 import Image1 from "../../../public/icons/Rectangle-4.svg?react";
 import Group1 from "../../../public/icons/Rectangle-15.svg?react";
 import Group2 from "../../../public/icons/Rectangle-16.svg?react";
@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
 
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <UserOrtagon />
+                            <UserOctagon />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
