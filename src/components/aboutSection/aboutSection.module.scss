@@ -188,6 +188,29 @@
       object-fit: contain;
     }
   }
+
+  &__bedroom-image,
+  &__livingroom-image {
+    width: 329px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      box-shadow: 4px 10px 30px 0px $about-border-color;
+    }
+  }
+
+  &__bedroom-image {
+    height: 280px;
+  }
+
+  &__livingroom-image {
+    height: 220px;
+  }
 }
 
 
@@ -306,6 +329,22 @@
   .about__description {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  .about__bedroom-image,
+  .about__livingroom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .about__bedroom-image img,
+  .about__livingroom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
   }
 }
 
