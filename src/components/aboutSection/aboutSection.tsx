@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
-import SmartHomeIcon from "../../../public/icons/icon _smart home_.svg?react";
-import UserOctagon from "../../../public/icons/icon _user octagon_.svg?react";
-import Image1 from "../../../public/icons/Rectangle-4.svg?react";
-import Group1 from "../../../public/icons/Rectangle-15.svg?react";
-import Group2 from "../../../public/icons/Rectangle-16.svg?react";
-import Ellipse from "../../../public/icons/Ellipse-18.svg?react";
-import Group from "../../../public/icons/Group.svg?react";
+import SmartHomeIcon from "../../../public/icons/icon_smarthome_.svg?react";
+import UserOctagonIcon from "../../../public/icons/icon_useroctagon_.svg?react";
+import MainHouseImage from "../../../public/icons/Rectangle-4.svg?react";
+import BedroomImage from "../../../public/icons/Rectangle-15.svg?react";
+import LivingRoomImage from "../../../public/icons/Rectangle-16.svg?react";
+import DecorativeCircle from "../../../public/icons/Ellipse-18.svg?react";
+import CircularText from "../../../public/icons/Group.svg?react";
 
 const AboutSection: React.FC = () => {
     return (
@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
 
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <UserOctagon />
+                            <UserOctagonIcon />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
@@ -52,26 +52,26 @@ const AboutSection: React.FC = () => {
 
             <div className={styles["about__images"]}>
                 <div className={styles["about__large-images"]}>
-                    <Image1
+                    <MainHouseImage
                         className={styles["about__large-image"]}
                     />
                 </div>
 
                 <div className={styles["about__group-images"]}>
                     <div className={styles["about__bedroom-image"]}>
-                        <Group1 />
+                        <BedroomImage />
                     </div>
                     <div className={styles["about__livingroom-image"]}>
-                        <Group2 />
+                        <LivingRoomImage />
                     </div>
                 </div>
 
                 <div className={styles["about__group"]}>
-                    <Group/>
+                    <CircularText/>
                 </div>
 
                 <div className={styles["about__ellipse"]}>
-                    <Ellipse />
+                    <DecorativeCircle />
                 </div>
             </div>
         </section>
