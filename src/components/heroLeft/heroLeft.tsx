@@ -1,10 +1,7 @@
-
 import React from "react";
 import styles from "./heroLeft.module.scss";
 import Slider from "../slider/slider";
 import sliderImage from "./../../../public/images/hero-left-images.jpg"
-
-
 
 const HeroLeft: React.FC = () => {
     const slides = [{ src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel" },
@@ -15,12 +12,12 @@ const HeroLeft: React.FC = () => {
     return (
         <section className={styles["hero-left"]}>
             <div className={styles["hero-left__headings"]}>
-                <h4 className={styles["hero-left__subHeading"]}>
+                <p className={styles["hero-left__subHeading"]}>
                     REAL ESTATE
-                </h4>
-                <h2 className={styles["hero-left__mainHeading"]}>
+                </p>
+                <h1 className={styles["hero-left__mainHeading"]}>
                     Find a perfect home you love..!
-                </h2>
+                </h1>
                 <p className={styles["hero-left__description"]}>
                     Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.
                 </p>

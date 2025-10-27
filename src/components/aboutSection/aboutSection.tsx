@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
                 <div className={styles["about__cards"]}>
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <SmartHomeIcon />
+                            <SmartHomeIcon aria-hidden="true" />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
@@ -39,7 +39,7 @@ const AboutSection: React.FC = () => {
 
                     <div className={styles["about__card"]}>
                         <div className={styles["about__icon"]}>
-                            <UserOctagonIcon />
+                            <UserOctagonIcon aria-hidden="true" />
                         </div>
                         <div className={styles["about__cardtext"]}>
                             <h4 className={styles["about__cardheader"]}>Donec porttitor euismod</h4>
@@ -53,26 +53,26 @@ const AboutSection: React.FC = () => {
 
             <div className={styles["about__images"]}>
                 <div className={styles["about__large-images"]}>
-                    <MainHouseImage
+                    <MainHouseImage aria-hidden="true"
                         className={styles["about__large-image"]}
                     />
                 </div>
 
                 <div className={styles["about__group-images"]}>
                     <div className={styles["about__bedroom-image"]}>
-                        <BedroomImage />
+                        <BedroomImage aria-hidden="true"/>
                     </div>
                     <div className={styles["about__livingroom-image"]}>
-                        <LivingRoomImage />
+                        <LivingRoomImage aria-hidden="true"/>
                     </div>
                 </div>
 
                 <div className={styles["about__group"]}>
-                    <CircularText/>
+                    <CircularText aria-hidden="true"/>
                 </div>
 
                 <div className={styles["about__ellipse"]}>
-                    <DecorativeCircle />
+                    <DecorativeCircle aria-hidden="true"/>
                 </div>
             </div>
         </section>
