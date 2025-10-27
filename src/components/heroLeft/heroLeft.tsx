@@ -7,10 +7,10 @@ import sliderImage from "./../../../public/images/hero-left-images.jpg"
 
 
 const HeroLeft: React.FC = () => {
-    const slides = [{src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel"},
-        {src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel"},
-        {src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel"},
-        {src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel"}
+    const slides = [{ src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel" },
+    { src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel" },
+    { src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel" },
+    { src: sliderImage, alt: "Luxury Classic Modern Bedroom Suite Hotel" }
     ];
     return (
         <section className={styles["hero-left"]}>
@@ -26,7 +26,7 @@ const HeroLeft: React.FC = () => {
                 </p>
             </div>
             <div className={styles["hero-left__crousel"]}>
-                <Slider slides={slides}  showArrows={true} showProgress={true} />
+                <Slider slides={slides} showArrows={true} showProgress={true} />
             </div>
 
         </section>

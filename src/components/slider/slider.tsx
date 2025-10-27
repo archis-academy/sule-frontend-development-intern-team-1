@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import styles from "./slider.module.scss";
 
 type SlideItem =
@@ -27,6 +27,18 @@ const Slider: React.FC<SliderProps> = ({
   const [index, setIndex] = useState(0);
   const slidesCount = slides.length;
 
+  const prev = useCallback(() => {
+    setIndex((i) => (i - 1 + slidesCount) % slidesCount);
+  }, [slidesCount]);
+
+  const next = useCallback(() => {
+    setIndex((i) => (i + 1) % slidesCount);
+  }, [slidesCount]);
+
+  const goTo = useCallback((i: number) => {
+    setIndex(i);
+  }, []);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") prev();
@@ -34,11 +46,7 @@ const Slider: React.FC<SliderProps> = ({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [slidesCount]);
-
-  const prev = () => setIndex((i) => (i - 1 + slidesCount) % slidesCount);
-  const next = () => setIndex((i) => (i + 1) % slidesCount);
-  const goTo = (i: number) => setIndex(i);
+  }, [prev, next]);
 
   return (
     <div className={`${styles["slider"]} ${className ?? ""}`}>
