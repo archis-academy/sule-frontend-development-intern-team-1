@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+@import '../../styles/fonts';
+
+.hero-left {
+    width: 668px;
+    height: 617px;
+    gap: 50px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+
+    &__headings {
+        width: 668px;
+        height: 216px;
+        gap: 30px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subHeading {
+        width: 668px;
+        height: 14px;
+        opacity: 1;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 19.4px;
+        line-height: 100%;
+        letter-spacing: 15%;
+        color: $icon-color;
+    }
+
+    &__mainHeading {
+        width: 668px;
+        height: 105px;
+        opacity: 1;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 57px;
+        line-height: 65px;
+        letter-spacing: 0%;
+        color: $hero-heading-color;
+
+    }
+
+    &__description {
+        width: 580px;
+        height: 37px;
+        opacity: 1;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0%;
+        color: $adress-text-color;
+    }
+
+    &__crousel {
+        width: 668px;
+        height: 351px;
+        gap: 11px;
+        opacity: 1;
+
+    }
+}
