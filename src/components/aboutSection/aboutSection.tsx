@@ -68,7 +68,7 @@ const AboutSection: React.FC = () => {
                 </div>
 
                 <div className={styles["about__group"]}>
-                    <CircularText/>
+                    <CircularText />
                 </div>
 
                 <div className={styles["about__ellipse"]}>
